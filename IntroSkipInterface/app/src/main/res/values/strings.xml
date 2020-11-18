@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">IntroSkipInterface</string>
+
+    <!-- Slide 1 Title and Description -->
+    <string name="slide_1_title">Level 1</string>>
+    <string name="slide_1_desc">Learning Words</string>>
+
+    <!-- Slide 2 Title and Description -->
+    <string name="slide_2_title">Level 2</string>>
+    <string name="slide_2_desc">Learning Words</string>>
+
+    <!-- Slide 3 Title and Description -->
+    <string name="slide_3_title">Level 3</string>>
+    <string name="slide_3_desc">Learning Sentence</string>>
+
+    <!-- Slide 4 Title and Description -->
+    <string name="slide_4_title">Level 4</string>>
+    <string name="slide_4_desc">Learning Language</string>>
+
+    <!-- Slide 1 Title and Description -->
+    <string name="my_preference">"com.abc.com.MyPref"</string>>
+    <string name="my_preference_key">"com.abc.com.MyPrefKey"</string>>
+</resources>

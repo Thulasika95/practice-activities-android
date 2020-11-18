@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".MainActivity" >
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Interested Movie Category"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:fontFamily="@font/text1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Action Movies"
+                android:textColor="#000"
+                android:textSize="10sp"
+                android:fontFamily="@font/text1"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal1"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/action">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/avenger1"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="5dp"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/avenger1" />
+
+                    <ImageView
+                        android:id="@+id/avenger2"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:onClick="handleSelection"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toEndOf="@+id/avenger1"
+                        app:layout_constraintTop_toTopOf="@+id/avenger1"
+                        app:srcCompat="@drawable/avenger2" />
+
+                    <ImageView
+                        android:id="@+id/avenger3"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:onClick="handleSelection"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toEndOf="@id/avenger2"
+                        app:layout_constraintTop_toTopOf="@id/avenger2"
+                        app:srcCompat="@drawable/avenger3" />
+
+                    <ImageView
+                        android:id="@+id/avenger4"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:onClick="handleSelection"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toEndOf="@id/avenger3"
+                        app:layout_constraintTop_toTopOf="@id/avenger3"
+                        app:srcCompat="@drawable/avenger4" />
+
+                    <ImageView
+                        android:id="@+id/avenger5"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:onClick="handleSelection"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toEndOf="@id/avenger4"
+                        app:layout_constraintTop_toTopOf="@id/avenger4"
+                        app:srcCompat="@drawable/avenger5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <CheckBox
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Cartoon Movies"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:fontFamily="@font/text1"
+                app:layout_constraintStart_toStartOf="@id/action"
+                app:layout_constraintTop_toBottomOf="@id/horizontal1" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal2"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/cartoon1"
+                        android:scaleType="fitCenter"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/catoons1" />
+
+                    <ImageView
+                        android:id="@+id/cartoon2"
+                        android:scaleType="fitCenter"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintStart_toEndOf="@id/cartoon1"
+                        app:layout_constraintTop_toTopOf="@id/cartoon1"
+                        app:srcCompat="@drawable/catoons2" />
+
+                    <ImageView
+                        android:id="@+id/cartoon3"
+                        android:scaleType="fitCenter"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintStart_toEndOf="@id/cartoon2"
+                        app:layout_constraintTop_toTopOf="@id/cartoon2"
+                        app:srcCompat="@drawable/catoons3" />
+
+                    <ImageView
+                        android:id="@+id/cartoon4"
+                        android:scaleType="fitCenter"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintStart_toEndOf="@id/cartoon3"
+                        app:layout_constraintTop_toTopOf="@id/cartoon3"
+                        app:srcCompat="@drawable/catoons4" />
+
+                    <ImageView
+                        android:id="@+id/cartoon5"
+                        android:scaleType="fitCenter"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintStart_toEndOf="@id/cartoon4"
+                        app:layout_constraintTop_toTopOf="@id/cartoon4"
+                        app:srcCompat="@drawable/catoons5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <CheckBox
+                android:id="@+id/science_fiction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Science Fiction Movies"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:fontFamily="@font/text1"
+                app:layout_constraintStart_toStartOf="@id/textView1"
+                app:layout_constraintTop_toBottomOf="@id/horizontal2" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal3"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/science_fiction">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageButton10"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/avenger6"
+                        android:scaleType="fitCenter"/>
+
+                    <ImageView
+                        android:id="@+id/imageButton11"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintStart_toEndOf="@id/imageButton10"
+                        app:layout_constraintTop_toTopOf="@id/imageButton10"
+                        app:srcCompat="@drawable/avenger7" />
+
+                    <ImageView
+                        android:id="@+id/imageButton12"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintStart_toEndOf="@id/imageButton11"
+                        app:layout_constraintTop_toTopOf="@id/imageButton11"
+                        app:srcCompat="@drawable/avenger8" />
+
+                    <ImageView
+                        android:id="@+id/imageButton13"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintStart_toEndOf="@id/imageButton12"
+                        app:layout_constraintTop_toTopOf="@id/imageButton12"
+                        app:srcCompat="@drawable/avenger9" />
+
+                    <ImageView
+                        android:id="@+id/imageButton14"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintStart_toEndOf="@id/imageButton13"
+                        app:layout_constraintTop_toTopOf="@id/imageButton13"
+                        app:srcCompat="@drawable/horror1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/submit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
